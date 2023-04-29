@@ -29,6 +29,7 @@
         function sendMessage() {
             var to = sessionStorage.getItem('id') == '1' ? '2' : '1';
             socket.emit('private', { to, msg: 'Hello from ' + sessionStorage.getItem('id') });
+            socket.emit('group', { to, msg: 'Hello from ' + sessionStorage.getItem('id') });
         }
     </script>
 </body>
